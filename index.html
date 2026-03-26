@@ -1,124 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ridhanya Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ridhanya Portfolio</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: #f4f6f9;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f7fa;
+}
 
-        header {
-            background: linear-gradient(to right, #2c3e50, #80bfca);
-            color: white;
-            text-align: center;
-            padding: 40px;
-        }
+/* HERO */
+.hero {
+    background: linear-gradient(to right, #3e7388, #7cc1f3);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
 
-        header h1 {
-            margin: 0;
-        }
+.hero img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
 
-        section {
-            padding: 30px;
-        }
+section {
+    padding: 30px;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-        h2 {
-            color: #333;
-        }
+/* ROW */
+.row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-        .skills span {
-            display: inline-block;
-            background: #2c3e50;
-            color: white;
-            padding: 8px 12px;
-            margin: 5px;
-            border-radius: 5px;
-        }
+.col {
+    flex: 1;
+    min-width: 250px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #2c3e50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+/* SKILLS */
+.skills span {
+    display: inline-block;
+    background: #3e7388;
+    color: white;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+}
 
-        footer {
-            text-align: center;
-            background: #2c3e50;
-            color: white;
-            padding: 15px;
-        }
-    </style>
+/* TIMELINE */
+.timeline {
+    border-left: 3px solid #3e7388;
+    padding-left: 15px;
+}
+
+.timeline-item {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #3e7388;
+    border-radius: 50%;
+}
+
+.timeline-item span {
+    font-size: 12px;
+    color: gray;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: #3e7388;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #3e7388;
+    color: white;
+}
+</style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
+    <img src="https://via.placeholder.com/120" alt="profile">
     <h1>SREE RIDHANYA</h1>
     <p>Full Stack Developer | Python</p>
-</header>
+</div>
 
 <section>
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            Aspiring Full-Stack Developer with knowledge in HTML, CSS, JavaScript, Python, and MySQL.
-            Passionate about building real-world applications.
-        </p>
-    </div>
 
-    <div class="card">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Bootstrap</span>
-            <span>JavaScript</span>
-            <span>Python</span>
-            <span>MySQL</span>
+<!-- ABOUT -->
+<div class="card">
+    <h2>About Me</h2>
+    <p>
+        Aspiring Full-Stack Developer with skills in HTML, CSS, JavaScript, Python and MySQL.
+        Passionate about building real-world applications and improving user experience.
+    </p>
+</div>
+
+<!-- PROFILE -->
+<div class="card">
+    <h2>Profile</h2>
+
+    <div class="row">
+
+        <div class="col">
+            <h3>👩 Personal Info</h3>
+            <p>👤 <b>Name:</b> Sree Ridhanya</p>
+            <p>📧 <b>Email:</b> ridhanyaponnusamy@gmail.com</p>
+            <p>💻 <b>Role:</b> Full Stack Developer</p>
+            <p>📍 <b>Location:</b> Tamil Nadu</p>
         </div>
-    </div>
 
-    <div class="card">
-        <h2>Projects</h2>
-        <ul>
-            <li>E-commerce Website (Cart using LocalStorage)</li>
-            <li>Student Marksheet System</li>
-            <li>Password Validation Form</li>
-        </ul>
-    </div>
+        <div class="col">
+            <h3>🎓 Education</h3>
 
-    <div class="card">
-        <h2>Education</h2>
-        <p>KPR College (2021–2024)</p>
-        <p>HSC (2020-2021)</p>
-    </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>KPR College</h4>
+                    <span>2021 – 2024</span>
+                    <p>UG Degree</p>
+                </div>
 
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: ridhanyaponnusamy@gmail.com</p>
-        <a href="https://github.com/ridhanyaponnusamy" class="btn">GitHub</a>
+                <div class="timeline-item">
+                    <h4>Avinashi Kalvi Nilayam</h4>
+                    <span>2018 – 2021</span>
+                    <p>Higher Secondary</p>
+                </div>
+            </div>
+
+        </div>
+
     </div>
+</div>
+
+<!-- SKILLS -->
+<div class="card">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Bootstrap</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>MySQL</span>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="card">
+    <h2>Projects</h2>
+    <ul>
+        <li>🛒 E-commerce Website (Cart using LocalStorage)</li>
+        <li>🎓 Student Marksheet System</li>
+        <li>🔐 Password Validation Form</li>
+    </ul>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+    <h2>Contact</h2>
+    <p>Email: ridhanyaponnusamy@gmail.com</p>
+    <a href="https://github.com/ridhanyaponnusamy" class="btn">GitHub</a>
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 Ridhanya</p>
+    <p>Sree Ridhanya</p>
 </footer>
 
 </body>
